@@ -1355,7 +1355,7 @@ AC_SUBST(GDK_DEP_CFLAGS)
 ########################################
 
 if test x$enable_x11_backend = xyes; then
-   ATK_PACKAGES="atk atk-bridge-2.0"
+   ATK_PACKAGES="atk"
 else
    ATK_PACKAGES="atk"
 fi

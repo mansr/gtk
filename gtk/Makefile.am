@@ -949,17 +949,6 @@ endif
 nodist_gtk_c_sources =
 gtk_c_sources = $(gtk_base_c_sources)
 
-gtk_dbus_built_sources = gtkdbusgenerated.c gtkdbusgenerated.h
-
-$(gtk_dbus_built_sources) : Makefile.am gtkdbusinterfaces.xml
-	$(AM_V_GEN) gdbus-codegen \
-	--interface-prefix org.Gtk. \
-	--c-namespace _Gtk \
-	--generate-c-code gtkdbusgenerated \
-	$(srcdir)/gtkdbusinterfaces.xml
-
-nodist_gtk_c_sources += $(gtk_dbus_built_sources)
-
 gtk_os_unix_c_sources = 		\
 	gtkcustompaperunixdialog.c	\
 	gtkpagesetupunixdialog.c	\
